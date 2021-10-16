@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* navbar */
+#logo-navbar{
+  height: 50px;
+}
+
+#main-btn{
+  text-decoration: none;
+}
+
+#web-title{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-list {
+  color: white;
+  transition: transform .2s;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#navbar .navbar-active #navbarNav .navbar-nav li.active > a {
+	color: #FD8008;
+  font-weight: bold;
+}
+
+.scroll-down{
+  background-color: #011669;
+}
+/* navbar */
+
+/* carousel */
+#patch{
+  position: relative;
+}
+
+#image-cover{
+  width: 100%;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-30%, -50%);
+}
+
+#title{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#foto{
+  position: absolute;
+  width: 180px;
+  border-radius: 90%;
+  transform: translate(-30%, 60%);
+}
+
+#text-profile{
+  position: absolute;
+  font-size: 30px;
+  transform: translate(33%, 500%);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color: #051881;
+}
+
+#linkedin-img, #instagram-img, #facebook-img{
+  width: 30px;
+  margin-right: 20px;
+}
+
+#twitter-img{
+  width: 30px;
+}
+
+#linkedin, #instagram, #facebook, #twitter{
+  display: none;
+}
+
+#linkedin-img:hover{
+  margin-right: 0;
+}
+
+#linkedin-img:hover + #linkedin {
+  display: inline;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#instagram-img:hover{
+  margin-right: 0;
+}
+
+#instagram-img:hover + #instagram {
+  display: inline;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#facebook-img:hover{
+  margin-right: 0;
+}
+
+#facebook-img:hover + #facebook {
+  display: inline;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#twitter-img:hover{
+  margin-right: 0;
+}
+
+#twitter-img:hover + #twitter {
+  display: inline;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  transition-delay: 2s;
+}
+/* carousel */
+
+/* banner */
+.banner-image{
+  background-image: url(../assets/mainCarosel.png);
+  background-size: cover;
+}
+/* banner */
+
+/* footer */
+#footer{
+  background-color: #011669;
+}
+
+#copyright{
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+}
+/* footer */

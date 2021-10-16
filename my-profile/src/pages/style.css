@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.banner-image{
+  background-image: url(../assets/mainCarosel.png);
+  background-size: cover;
+}
+
+/* about */
+#about-page{
+  height: 41.5em;
+  padding-top: 10em;
+}
+
+#foto-profile{
+  height: 30em;
+  width: auto;
+  border-color: #F76A0D; 
+  margin-top: 10.5em;
+}
+
+#text-about{
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#name{
+  color: #F76A0D; /* 010B56 F76A0D */
+}
+/* about */
+
+/* education */
+#bg-purple{
+  background-color: #F5F2F4;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 95px;
+}
+
+.education-img{
+  height: 60px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+}
+
+.skill-img{
+  height: 30px;
+  width: auto;
+}
+
+.text{
+  margin-left: 5px;
+  margin-right: 20px;
+}
+/* education */
+
+/* portfolio */
+.porto-img{
+  height: 10em;
+  width: 100%;
+}
+#text-portfolio{
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 100px;
+}
+/* portfolio */

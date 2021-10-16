@@ -1,1 +1,1 @@
-# my-profile
+# find your favorites application in my profile
