@@ -12,13 +12,13 @@ function App() {
   return (
     <Router>
       <Switch>
+        {/* <Route path='/porto-detail/:id'>
+          <Navbar />
+          <PortoDetail />
+        </Route> */}
         <Route path='/'>
           <Navbar />
           <Home />
-        </Route>
-        <Route path='/portofilio/:id'>
-          <Navbar />
-          <PortoDetail />
         </Route>
       </Switch>
     </Router>
