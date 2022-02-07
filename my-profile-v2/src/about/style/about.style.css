@@ -1,0 +1,11 @@
+#bg-about{
+  /* background-image: url(../../commons/assets/images/bg-white.jpeg);
+  background-size: cover; */
+  height: 41em;
+  padding-top: 10em;
+}
+
+#foto{
+  height: auto;
+  border-color: #F76A0D; 
+}

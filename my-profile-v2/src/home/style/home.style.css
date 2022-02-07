@@ -1,0 +1,14 @@
+#banner{
+  background-image: url(../../commons/assets/images/bg-front.jpeg);
+  background-size: cover;
+}
+
+.banner-text{
+  color: #0A0001; /*#28DAD1;*/
+  font-weight: 900;
+}
+
+#education{
+  margin-top: 50em;
+  background-color: aqua;
+}
