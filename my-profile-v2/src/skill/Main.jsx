@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
-import { BackendSkills, FrontendSkills } from './components';
+import { BackendSkills, DatabaseSkills, FrontendSkills, MobileSkills } from './components';
 import "./style/skill.style.css";
 
 export default function Main() {
@@ -12,15 +12,18 @@ export default function Main() {
           <div class="line-class"></div>
           <h3 class="section-subheading text-muted mt-3">Let's get to know me more</h3>
         </div>
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-          <Tab eventKey="home" title="Backend Skills">
+        <Tabs defaultActiveKey="backend" id="uncontrolled-tab-example">
+          <Tab eventKey="backend" title="Backend Skills">
             <BackendSkills />
           </Tab>
-          <Tab eventKey="profile" title="Frontend Skills">
+          <Tab eventKey="database" title="Database Skills">
+            <DatabaseSkills />
+          </Tab>
+          <Tab eventKey="frontend" title="Frontend Skills">
             <FrontendSkills />
           </Tab>
-          <Tab eventKey="contact" title="Mobile Skills" >
-            <h1>awa</h1>
+          <Tab eventKey="mobile" title="Mobile Skills" >
+            <MobileSkills />
           </Tab>
         </Tabs>
       </div>
