@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
-import { Navigation, PageNotFound } from './commons/components';
+import { Footer, Navigation, PageNotFound } from './commons/components';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
             <>
               <Navigation />
               <Home />
+              <Footer />
             </>
           } />
           <Route path="/*" element={

@@ -5,8 +5,8 @@ import "./style/skill.style.css";
 
 export default function Main() {
   return (
-    <div class="container">
-      <div id="education">
+    <div class="container skills">
+      <div id="skills">
         <div>
           <h2>AWESOME SKIL<span className="text text-danger">LS</span></h2>
           <div class="line-class"></div>

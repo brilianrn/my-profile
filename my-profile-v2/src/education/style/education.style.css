@@ -1,7 +1,7 @@
 #education{
   background-image: url(../../commons/assets/images/bg-white.jpeg);
   background-size: cover;
-  margin-top: 4.18em;
+  margin-top: 2em;
   padding-top: 5em;
 }
 
@@ -11,7 +11,7 @@
     background-size: cover;
     margin-top: 5.5cm;
     padding-top: 5.5cm;
-    padding-bottom: 5em;
+    /* padding-bottom: 2em; */
   }
 }
 

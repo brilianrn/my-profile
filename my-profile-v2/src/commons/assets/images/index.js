@@ -20,3 +20,8 @@ export { default as ORACLE } from "./oracle.png";
 export { default as MYSQL } from "./mysql.png";
 export { default as REACTNATIVE } from "./reactnative.png";
 export { default as ANDROIDSTUDIO } from "./androidstudio.png";
+export { default as MOVIEAPP } from "./movieapp.png";
+export { default as HIJABMEEZHA } from "./hijabmeezha.JPG";
+export { default as SPORTIRENA } from "./sportirena.png";
+export { default as NADI } from "./nadi.png";
+export { default as DAPOERDINPUT } from "./dapoerdinput.png";

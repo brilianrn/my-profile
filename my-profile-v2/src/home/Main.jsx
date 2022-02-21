@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Education, Skills } from '../app/index';
+import { About, Education, Portofolios, Skills } from '../app/index';
 import { Banner } from './components';
 import "./style/home.style.css";
 
@@ -18,16 +18,9 @@ export default function Main() {
       <section className="page-section" id="skills">
         <Skills />
       </section>
-      {/* <section className="page-section" id="about-me">
-        <About />
-      </section>
-      <section className="page-section" id="education">
-        <Education />
-      </section>
       <section className="page-section" id="portfolio">
-        <Portfolio />
+        <Portofolios />
       </section>
-      <Footer /> */}
     </div>
   );
 }

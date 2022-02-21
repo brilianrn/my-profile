@@ -6,12 +6,12 @@ export default function Banner() {
     <div id="banner" className="w-100 vh-100 d-flex justify-content-center align-items-center">
       <div class="content text-center">
         <div>
-          <p className="text h1 text-light">
+          <p className="text h1">
             <span className="banner-text">
               Hi, I am Software Engineer
             </span>
           </p>
-          <p className="text text-uppercase text-light">
+          <p className="text text-uppercase">
             <span className="banner-text">
               a professional software engineer with strong ability in this field
             </span>

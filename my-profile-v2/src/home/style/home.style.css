@@ -12,3 +12,11 @@
   margin-top: 50em;
   background-color: aqua;
 }
+
+@media only screen and (max-width: 600px) {
+  .banner-text{
+    color: #936D2B; /*#28DAD1;*/
+    font-weight: 900;
+    background-color: #E4E4E5;
+  }
+}
