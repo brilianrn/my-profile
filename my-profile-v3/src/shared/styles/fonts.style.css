@@ -1,0 +1,72 @@
+/**
+ * @license
+ *
+ * Font Family: ProximaSoft
+ *
+ * Font Styles:
+ * ProximaSoft Regular
+ * ProximaSoft Black
+ * ProximaSoft Bold
+ * ProximaSoft SemiBold
+ * ProximaSoft ExtraBold
+ * ProximaSoft Light
+ * ProximaSoft Thin
+ * ProximaSoft Medium
+ *
+*/
+
+@font-face {
+  font-family: "ProximaSoft Regular";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft Black";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Black.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft Bold";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Bold.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft SemiBold";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-SemiBold.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft ExtraBold";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-ExtraBold.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft Light";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Light.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft Thin";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Thin.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft Medium";
+  src: url("../../../public/fonts/ProximaSoft/ProximaSoft-Medium.ttf")
+    format("truetype");
+  font-display: swap;
+}

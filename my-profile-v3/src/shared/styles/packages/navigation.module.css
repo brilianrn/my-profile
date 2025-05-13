@@ -1,0 +1,7 @@
+.topbar {
+  @apply bg-transparent w-full md:px-12 px-6 py-2 flex justify-between fixed top-0 z-50 gap-4 items-center;
+}
+
+.topbar-menu {
+  @apply bg-gray-300 px-6 py-4 rounded-full items-center m-auto absolute left-1/2 transform -translate-x-1/2 md:flex hidden;
+}
