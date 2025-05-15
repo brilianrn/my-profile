@@ -41,11 +41,18 @@ const RootLayout = async ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  let locale = "id";
+  let messages = {};
+
+  try {
+    locale = await getLocale();
+    messages = await getMessages();
+  } catch (error) {
+    console.error("Error loading locale/messages:", error);
+  }
 
   return (
-    <html lang={locale || "id"} className="font-regular">
+    <html lang={locale} className="font-regular">
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
@@ -54,5 +61,3 @@ const RootLayout = async ({
     </html>
   );
 };
-
-export default RootLayout;
