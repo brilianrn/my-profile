@@ -12,10 +12,18 @@ import {
   ICExperience,
   ICGears,
   ICHome,
+  ICMail,
   ICPortofolio,
   ICStars,
 } from "../../../../public/images";
-import { About, Experience, Home, Portfolio, Skill } from "../components";
+import {
+  About,
+  Contact,
+  Experience,
+  Home,
+  Portfolio,
+  Skill,
+} from "../components";
 
 const DashboardView = () => {
   const t = useTranslations("Home");
@@ -91,12 +99,12 @@ const DashboardView = () => {
               headerRef: portfolioRef,
               headerIcon: ICPortofolio,
             },
-            // {
-            //   headerID: contactID,
-            //   headerTitle: t("contact"),
-            //   headerRef: contactRef,
-            //   headerIcon: ICMail,
-            // },
+            {
+              headerID: contactID,
+              headerTitle: t("contact"),
+              headerRef: contactRef,
+              headerIcon: ICMail,
+            },
           ]}
         />
         <Home
@@ -111,7 +119,7 @@ const DashboardView = () => {
           className={classNames([styles.section, styles.about])}
           y={y}
         />
-        <div className="relative">
+        <section ref={experienceRef} id={experienceID} className="relative">
           <Experience
             ref={experienceRef}
             id={experienceID}
@@ -126,7 +134,7 @@ const DashboardView = () => {
             height={100}
             className="absolute bottom-[-270px] right-0 z-0 w-screen h-[25em] object-cover opacity-10"
           />
-        </div>
+        </section>
         <Skill
           ref={sklillsRef}
           id={skillsID}
@@ -139,12 +147,12 @@ const DashboardView = () => {
           className={classNames([styles.section])}
           y={y}
         />
-        {/* <Contact
+        <Contact
           ref={contactRef}
           id={contactID}
           className={classNames([styles.section])}
           y={y}
-        /> */}
+        />
       </AppLayout>
     </div>
   );

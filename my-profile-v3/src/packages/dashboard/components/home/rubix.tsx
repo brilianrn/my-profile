@@ -18,8 +18,8 @@ export const Rubix = () => {
   useAnimationFrame((t) => {
     if (!ref.current) return;
 
-    const rotate = Math.sin(t / 10000) * 100;
-    const y = (1 + Math.sin(t / 1000)) * -150;
+    const rotate = Math.sin(t / 10000) * 300;
+    const y = (1 + Math.sin(t / 1000)) * -200;
     ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
   });
 
@@ -31,7 +31,7 @@ export const Rubix = () => {
         ref={ref}
       >
         <div
-          className="absolute w-full h-full bg-orange-default opacity-60"
+          className="absolute w-full h-full bg-orange-default"
           style={{ transform: "rotateY(0deg) translateZ(100px)" }}
         >
           <Image
@@ -44,7 +44,7 @@ export const Rubix = () => {
           />
         </div>
         <div
-          className="absolute w-full h-full bg-primary-default opacity-60 p-8"
+          className="absolute w-full h-full bg-primary-default p-8"
           style={{ transform: "rotateY(90deg) translateZ(100px)" }}
         >
           <Image
@@ -57,7 +57,7 @@ export const Rubix = () => {
           />
         </div>
         <div
-          className="absolute w-full h-full bg-red-500 opacity-60 p-8"
+          className="absolute w-full h-full bg-red-500 p-8"
           style={{ transform: "rotateY(180deg) translateZ(100px)" }}
         >
           <Image
@@ -70,13 +70,13 @@ export const Rubix = () => {
           />
         </div>
         <div
-          className="absolute w-full h-full bg-green-500 opacity-60 p-8"
+          className="absolute w-full h-full bg-green-500 p-8"
           style={{ transform: "rotateY(-90deg) translateZ(100px)" }}
         >
           <ICAdonisJs className="w-full h-full object-cover" />
         </div>
         <div
-          className="absolute w-full h-full bg-yellow-500 opacity-60 p-8"
+          className="absolute w-full h-full bg-yellow-500 p-8"
           style={{ transform: "rotateX(90deg) translateZ(100px)" }}
         >
           <Image
@@ -89,7 +89,7 @@ export const Rubix = () => {
           />
         </div>
         <div
-          className="absolute w-full h-full bg-white opacity-60"
+          className="absolute w-full h-full bg-white"
           style={{ transform: "rotateX(-90deg) translateZ(100px)" }}
         >
           <Image

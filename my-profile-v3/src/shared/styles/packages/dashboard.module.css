@@ -1,5 +1,6 @@
 .section {
   @apply lg:h-screen h-full bg-dark-950 lg:snap-start snap-always scroll-smooth;
+  /* scroll-snap-align: start; */
 }
 
 .home {

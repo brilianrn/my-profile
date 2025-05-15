@@ -4,7 +4,7 @@ import { ConicGradientPointer } from "@/components";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { FC } from "react";
+import React, { FC } from "react";
 import { BrilianrnHome } from "../../../../../public/images";
 import { SectionProps } from "../components";
 import { Rubix } from "./rubix";
@@ -42,15 +42,12 @@ export const Home: FC<SectionProps> = ({ ...props }) => {
             .split(/(Full Stack Developer)/g)
             .map((part, index) =>
               part === "Full Stack Developer" ? (
-                <>
+                <React.Fragment key={index}>
                   <br />
-                  <span
-                    key={index}
-                    className="text-orange-400 font-extrabold leading-10"
-                  >
+                  <span className="text-orange-400 font-extrabold leading-10">
                     {part}
                   </span>
-                </>
+                </React.Fragment>
               ) : (
                 part
               )

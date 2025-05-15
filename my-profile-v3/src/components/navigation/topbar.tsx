@@ -12,18 +12,24 @@ export const Topbar: FC<TopbarProps> = ({ sections }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {
+    const scrollContainer = document.querySelector(".scroll-container");
+
     const handleScroll = () => {
+      const scrollTop = scrollContainer?.scrollTop || 0;
+
       const index = nearestIndex(
-        window.scrollY,
+        scrollTop, // ✅ sekarang benar
         sections,
         0,
         sections.length - 1
       );
       setActiveIndex(index);
     };
-    document.addEventListener("scroll", handleScroll);
+
+    scrollContainer?.addEventListener("scroll", handleScroll);
+
     return () => {
-      document.removeEventListener("scroll", handleScroll);
+      scrollContainer?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
