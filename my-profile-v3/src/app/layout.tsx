@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
-  title: "Professional Profile | brilianrn",
+  title: "Brilian Rachmad | Full Stack Developer",
   description:
     "Welcome to my professional profile. I am a software engineer, web developer and open-source contributor.",
 };
