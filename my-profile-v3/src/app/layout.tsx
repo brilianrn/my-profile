@@ -61,3 +61,5 @@ const RootLayout = async ({
     </html>
   );
 };
+
+export default RootLayout;
