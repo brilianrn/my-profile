@@ -17,7 +17,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-export const About: FC<SectionProps> = ({ y, ...props }) => {
+export const About: FC<SectionProps> = ({ ...props }) => {
   return (
     <div {...props}>
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center h-screen">

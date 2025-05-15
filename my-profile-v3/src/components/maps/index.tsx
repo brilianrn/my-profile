@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { ReactNode } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
+// eslint-disable-next-line
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
 L.Icon.Default.mergeOptions({

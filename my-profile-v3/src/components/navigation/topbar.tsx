@@ -17,12 +17,7 @@ export const Topbar: FC<TopbarProps> = ({ sections }) => {
     const handleScroll = () => {
       const scrollTop = scrollContainer?.scrollTop || 0;
 
-      const index = nearestIndex(
-        scrollTop, // ✅ sekarang benar
-        sections,
-        0,
-        sections.length - 1
-      );
+      const index = nearestIndex(scrollTop, sections, 0, sections.length - 1);
       setActiveIndex(index);
     };
 
