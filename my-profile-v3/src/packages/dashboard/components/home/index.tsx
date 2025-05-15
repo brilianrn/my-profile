@@ -1,13 +1,18 @@
 "use client";
 
-import { ConicGradientPointer } from "@/components";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { FC } from "react";
 import { BrilianrnHome } from "../../../../../public/images";
 import { SectionProps } from "../components";
 import { Rubix } from "./rubix";
+
+const ConicGradientPointer = dynamic(
+  () => import("@/components/conic-gradient-color"),
+  { ssr: false }
+);
 
 export const Home: FC<SectionProps> = ({ ...props }) => {
   const t = useTranslations("Home");

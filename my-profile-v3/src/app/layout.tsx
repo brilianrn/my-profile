@@ -41,18 +41,11 @@ const RootLayout = async ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  let locale = "id"; // fallback default locale
-  let messages = {}; // fallback kosong
-
-  try {
-    locale = await getLocale();
-    messages = await getMessages();
-  } catch (error) {
-    console.warn("Bot fetch fallback triggered:", error);
-  }
+  const locale = await getLocale();
+  const messages = await getMessages();
 
   return (
-    <html lang={locale} className="font-regular">
+    <html lang={locale || "id"} className="font-regular">
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -13,6 +13,8 @@ export const ConicGradientPointer = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -20,6 +22,7 @@ export const ConicGradientPointer = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
     setMounted(true);
+
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
@@ -53,3 +56,5 @@ export const ConicGradientPointer = () => {
     />
   );
 };
+
+export default ConicGradientPointer;
