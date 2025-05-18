@@ -26,6 +26,7 @@ export const Topbar: FC<TopbarProps> = ({ sections }) => {
     return () => {
       scrollContainer?.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line
   }, []);
 
   return (

@@ -146,7 +146,8 @@ export const Experience: FC<SectionProps> = ({ ...props }) => {
         {/* Button to view all */}
         <div className="w-full text-center z-[2] pt-4">
           <Link
-            href="/experience"
+            target="_blank"
+            href="https://www.canva.com/design/DAGnrx9DRT0/mZF7gSLL5Lks-WvomJdlBg/edit?utm_content=DAGnrx9DRT0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
             className="inline-block mt-4 px-6 py-2 z-[2] rounded-full border border-orange-400 text-orange-300 hover:bg-orange-500 hover:text-gray-200 hover:font-bold transition"
           >
             View Full Experience

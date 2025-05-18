@@ -1,5 +1,6 @@
 "use client";
 
+import { projectRoute } from "@/shared/constants";
 import styles from "@/shared/styles/packages/dashboard.module.css";
 import classNames from "clsx";
 import { motion } from "framer-motion";
@@ -170,7 +171,7 @@ export const Portfolio: FC<SectionProps> = ({ ...props }) => {
           {/* View All Link */}
           <div className="text-left">
             <Link
-              href="/portfolio"
+              href={projectRoute.index}
               className="inline-flex items-center gap-1 text-sm text-orange-default hover:underline transition-all group"
             >
               View All Projects

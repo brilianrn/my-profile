@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC } from "react";
 import { BrilianrnHome } from "../../../../../public/images";
 import { SectionProps } from "../components";
@@ -58,6 +60,23 @@ export const Home: FC<SectionProps> = ({ ...props }) => {
               )
             )}
         </motion.p>
+      </motion.div>
+
+      <motion.div
+        variants={fadeUp}
+        initial="initial"
+        whileInView="animate"
+        transition={{ duration: 0.6 }}
+      >
+        <Link
+          href={"#contact"}
+          className="text-white group/link flex items-center justify-center w-fit mx-auto tracking-wider bg-primary-default rounded-md px-2 py-1"
+        >
+          <motion.p className="group-hover/link:tracking-[5px] transition-all duration-200">
+            Let` s Collaborate
+          </motion.p>
+          <ArrowDown className="size-4 rotate-[225deg] transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5" />
+        </Link>
       </motion.div>
 
       <motion.div
