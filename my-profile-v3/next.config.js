@@ -11,11 +11,11 @@ module.exports = () => {
   const plugins = [withPWA, withNextIntl];
   return plugins.reduce((acc, next) => next(acc), {
     pageExtensions: ["ts", "tsx"],
-    i18n: {
-      locales: ["default", "en"],
-      defaultLocale: "default",
-      localeDetection: false,
-    },
+    // i18n: {
+    //   locales: ["default", "en"],
+    //   defaultLocale: "default",
+    //   localeDetection: false,
+    // },
     generateEtags: false,
     poweredByHeader: false,
     reactStrictMode: true,
