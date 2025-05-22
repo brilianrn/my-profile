@@ -169,18 +169,16 @@ export const Portfolio: FC<SectionProps> = ({ ...props }) => {
           ))}
 
           {/* View All Link */}
-          <div className="text-left">
-            <Link
-              href={projectRoute.index}
-              className="inline-flex items-center gap-1 text-sm text-orange-default hover:underline transition-all group"
-            >
-              View All Projects
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-          </div>
+          <Link
+            href={projectRoute.index}
+            className="inline-flex items-center gap-1 text-sm text-orange-default hover:underline transition-all group text-left"
+          >
+            View All Projects
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
         </div>
       </div>
     </div>
