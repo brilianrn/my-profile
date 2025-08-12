@@ -3,7 +3,7 @@
 import classNames from "clsx";
 import { motion, SVGMotionProps } from "framer-motion";
 
-interface PathProps extends SVGMotionProps<SVGPathElement> {}
+type PathProps = SVGMotionProps<SVGPathElement>;
 
 const Path: React.FC<PathProps> = (props) => (
   <motion.path

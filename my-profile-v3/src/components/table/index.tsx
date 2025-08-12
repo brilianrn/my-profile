@@ -46,6 +46,7 @@ export const Table = ({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        // eslint-disable-next-line
         isDesktop && setIsSticky(!entry.isIntersecting);
       },
       { threshold: 1, rootMargin: "-1px 0px 0px 0px" }
