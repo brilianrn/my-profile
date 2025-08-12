@@ -1,9 +1,17 @@
 "use client";
 
 import { AppLayout, Topbar } from "@/components";
+import {
+  aboutID,
+  contactID,
+  experienceID,
+  homeID,
+  portfolioID,
+  skillsID,
+} from "@/shared/constants";
 import styles from "@/shared/styles/packages/dashboard.module.css";
 import classNames from "clsx";
-import { useScroll, useTransform } from "framer-motion";
+import { useCycle, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef } from "react";
@@ -38,12 +46,8 @@ const DashboardView = () => {
   const sklillsRef = useRef<HTMLDivElement>(null!);
   const experienceRef = useRef<HTMLDivElement>(null!);
 
-  const homeID = "home";
-  const aboutID = "about";
-  const portfolioID = "portfolio";
-  const contactID = "contact";
-  const skillsID = "skills";
-  const experienceID = "experience";
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     container: scrollContainerRef,
@@ -54,20 +58,15 @@ const DashboardView = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
   return (
-    <div className="main-bg">
+    <div className="main-bg relative" ref={containerRef}>
       <AppLayout
         className={classNames([
           "overflow-x-hidden overflow-y-auto h-full w-full relative scroll-container",
         ])}
       >
-        {/* <motion.div
-          id="scroll-indicator"
-          className="bg-gradient-to-r from-orange-default via-dark-950 to-orange-default rounded-full h-2 fixed bottom-0 left-0 right-0 origin-top"
-          style={{
-            scaleX: y,
-          }}
-        /> */}
         <Topbar
+          isOpen={isOpen}
+          toggleMenu={toggleOpen}
           sections={[
             {
               headerID: homeID,

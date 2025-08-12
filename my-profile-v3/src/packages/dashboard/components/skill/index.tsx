@@ -92,7 +92,7 @@ export const Skill: FC<SectionProps> = ({ ...props }) => {
     <div
       {...props}
       className={classNames(
-        "py-24 px-4 w-full flex flex-col items-center justify-center bg-dark-950",
+        "md:pt-24 md:pb-24 pt-[150%] pb-[120%] px-4 w-full flex flex-col items-center justify-center bg-dark-950 md:gap-0 gap-8",
         props.className,
         styles.skills
       )}

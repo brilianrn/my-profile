@@ -67,7 +67,7 @@ export const projects = [
       "React Hook Form",
       "Tanstack Query",
     ],
-    link: "https://stgpwa.goapotik.com",
+    link: "https://m.goapotik.com",
   },
   {
     thumbnail: PTNewusSisarpas,

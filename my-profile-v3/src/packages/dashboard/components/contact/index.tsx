@@ -40,7 +40,7 @@ export const Contact: FC<SectionProps> = ({ ...props }) => {
     <div
       {...props}
       className={classNames([
-        "py-24 px-4 !w-full !flex !items-center !justify-center bg-dark-950",
+        "md:pt-24 md:pb-24 pt-[200%] pb-[110%] px-4 !w-full !flex !items-center !justify-center bg-dark-950",
         props.className,
       ])}
     >

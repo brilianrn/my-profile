@@ -3,12 +3,35 @@
 import sxNavigation from "@/shared/styles/packages/navigation.module.css";
 import { nearestIndex } from "@/shared/utils";
 import classNames from "clsx";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
-import { Brilianrn, ICThreeLines } from "../../../public/images";
+import { Brilianrn } from "../../../public/images";
+import { ListNavigation } from "./list-navigation";
+import { MenuToggle } from "./menu-toggle";
 import { TopbarProps } from "./navigation";
 
-export const Topbar: FC<TopbarProps> = ({ sections }) => {
+const sidebar: Variants = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 48px 44px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
+export const Topbar: FC<TopbarProps> = ({ sections, toggleMenu, isOpen }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {
@@ -30,15 +53,27 @@ export const Topbar: FC<TopbarProps> = ({ sections }) => {
   }, []);
 
   return (
-    <div className={classNames([sxNavigation.topbar, "z-0"])}>
-      <div className="absolute h-full w-full top-0 left-0 group-hover:scale-100 md:scale-0 scale-100 transition-all duration-300 bg-gray-300 shadow-lg z-0" />
-      <Image
-        src={Brilianrn}
-        alt="Brilian Rachmad Nurwachidin"
-        height={50}
-        width={50}
-        className="md:scale-0 scale-100 group-hover:scale-100 transition-all duration-500 cursor-pointer"
-      />
+    <motion.div
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      className={classNames([sxNavigation.topbar, "z-0"])}
+    >
+      <motion.div
+        variants={sidebar}
+        className="md:scale-0 scale-100 bg-white -top-2 left-0 h-screen absolute w-9/12 mt-2"
+      >
+        <div className="relative bg-red-300">
+          <Image
+            src={Brilianrn}
+            alt="Brilian Rachmad Nurwachidin"
+            height={40}
+            width={40}
+            className="group-hover:scale-100 transition-all duration-500 cursor-pointer absolute top-6 left-7"
+          />
+        </div>
+        <ListNavigation onChoose={() => toggleMenu?.()} />
+      </motion.div>
+      <div className="relative bg-red-200 size-0 md:scale-0 scale-100" />
       <div
         className={classNames([
           sxNavigation["topbar-menu"],
@@ -63,7 +98,11 @@ export const Topbar: FC<TopbarProps> = ({ sections }) => {
           </a>
         ))}
       </div>
-      <ICThreeLines className="w-6 h-6 md:scale-0 scale-100 group-hover:scale-100 transition-all duration-500 cursor-pointer text-primary-default" />
-    </div>
+      <MenuToggle
+        isOpen={isOpen}
+        toggle={toggleMenu ?? (() => {})}
+        className="md:scale-0 scale-100 bg-white relative h-14 w-14 rounded-full mt-2"
+      />
+    </motion.div>
   );
 };

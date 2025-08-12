@@ -1,5 +1,6 @@
 "use client";
 
+import { useScreenSize } from "@/shared/hooks";
 import classNames from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -37,12 +38,15 @@ export const Table = ({
   bodyClassName,
 }: TableProps) => {
   const tableHeaderRef = useRef<HTMLTableSectionElement>(null);
-  const [isSticky, setIsSticky] = useState(false);
+
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+
+  const { isDesktop } = useScreenSize();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsSticky(!entry.isIntersecting);
+        isDesktop && setIsSticky(!entry.isIntersecting);
       },
       { threshold: 1, rootMargin: "-1px 0px 0px 0px" }
     );
@@ -52,7 +56,7 @@ export const Table = ({
     return () => {
       if (header) observer.unobserve(header);
     };
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div className="relative">
@@ -66,7 +70,7 @@ export const Table = ({
             transition={{ duration: 0.2 }}
             className={classNames([
               stickyHeaderClassName,
-              "fixed top-0 left-0 right-0 z-50 bg-[#0d1117] border-b border-slate-700 px-6 py-2",
+              "fixed top-0 left-0 right-0 z-50 bg-[#0d1117] border-b border-slate-700 lg:px-6 py-2",
             ])}
           >
             <div className="max-w-7xl mx-auto overflow-x-auto">

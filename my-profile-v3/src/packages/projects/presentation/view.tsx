@@ -2,6 +2,7 @@
 
 import { Table, TableColumn } from "@/components";
 import { homeRoute } from "@/shared/constants";
+import classNames from "clsx";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
@@ -91,8 +92,8 @@ const fadeUp = {
 
 const ProjectsView = () => {
   return (
-    <div className="min-h-screen bg-[#0d1117] text-white py-12">
-      <motion.div className="w-screen max-w-6xl mx-auto">
+    <div className="min-h-screen bg-[#0d1117] text-white py-12 px-4">
+      <motion.div className="lg:w-screen lg:max-w-6xl mx-auto">
         <Link
           href={`${homeRoute}/#portfolio`}
           className="flex items-center gap-2 group cursor-pointer"
@@ -119,7 +120,7 @@ const ProjectsView = () => {
         >
           My Projects
         </motion.h1>
-        <div className="flex justify-start gap-4 items-center">
+        <div className="flex justify-start gap-4 items-center flex-wrap">
           <motion.div
             variants={fadeUp}
             initial="initial"
@@ -127,7 +128,8 @@ const ProjectsView = () => {
             transition={{ duration: 0.3 }}
             className="flex items-center gap-2"
           >
-            <Role role="FS" />:<div className="text-base">Full Stack</div>
+            <Role role="FS" />:
+            <div className="text-base text-nowrap">Full Stack</div>
           </motion.div>
           <motion.div
             variants={fadeUp}
@@ -148,12 +150,60 @@ const ProjectsView = () => {
             <Role role="BE" />:<div className="text-base">Backend</div>
           </motion.div>
         </div>
-        <Table
-          stickyHeaderClassName="!px-36"
-          bodyClassName="text-gray-400"
-          columns={columns}
-          data={projects.sort((a, b) => b.year - a.year)}
-        />
+        <div className="lg:block hidden">
+          <Table
+            stickyHeaderClassName="!px-36 md:block hidden"
+            bodyClassName="text-gray-400"
+            columns={columns}
+            data={projects.sort((a, b) => b.year - a.year)}
+          />
+        </div>
+        <div className="lg:hidden grid md:grid-cols-2 grid-cols-1 gap-2 mt-6 items-center">
+          {projects
+            ?.sort((a, b) => b.year - a.year)
+            .map((project, index) => (
+              <motion.a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className={classNames(
+                  "flex flex-col gap-2 rounded-xl border border-dark-700 transition-all duration-300 overflow-hidden bg-transparent h-full p-2 w-full",
+                  "cursor-pointer"
+                )}
+              >
+                <Image
+                  src={project.thumbnail || "/images/api.png"}
+                  alt={project.project}
+                  className={classNames([
+                    "object-contain",
+                    "w-64 h-32 flex-shrink-0 rounded-lg mx-auto",
+                  ])}
+                  width={80}
+                  height={80}
+                />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">
+                    {project.project}
+                  </h3>
+                  <p className="text-sm text-orange-default">{project.role}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.builtWith.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-dark-700 text-gray-300 text-xs px-2 py-1 rounded-md font-mono"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+        </div>
       </motion.div>
     </div>
   );

@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply font-regular overflow-x-hidden;
+  @apply font-regular overflow-x-hidden bg-dark-default;
 
   user-select: none;
   -webkit-user-select: none; /* Safari */

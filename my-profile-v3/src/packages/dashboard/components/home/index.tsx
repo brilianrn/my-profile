@@ -34,7 +34,7 @@ export const Home: FC<SectionProps> = ({ ...props }) => {
       <ConicGradientPointer />
 
       <motion.div
-        className="flex flex-col gap-4 mt-12"
+        className="flex flex-col gap-4 md:mt-12"
         variants={fadeUp}
         initial="initial"
         whileInView="animate"
@@ -70,7 +70,7 @@ export const Home: FC<SectionProps> = ({ ...props }) => {
       >
         <Link
           href={"#contact"}
-          className="text-white group/link flex items-center justify-center w-fit mx-auto tracking-wider bg-primary-default rounded-md px-2 py-1"
+          className="text-white group/link flex items-center justify-center w-fit mx-auto tracking-wider bg-primary-default rounded-md px-2 py-1 md:mt-0 mt-4"
         >
           <motion.p className="group-hover/link:tracking-[5px] transition-all duration-200">
             Let` s Collaborate
@@ -84,7 +84,7 @@ export const Home: FC<SectionProps> = ({ ...props }) => {
         whileInView={{ filter: "blur(0px)", opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2"
+        className="absolute md:bottom-4 left-1/2 -translate-x-1/2 md:mt-0 mt-4"
       >
         <Image
           src={BrilianrnHome}

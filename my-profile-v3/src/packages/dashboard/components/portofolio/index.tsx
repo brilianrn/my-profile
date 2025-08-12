@@ -23,7 +23,7 @@ const projects = [
     description:
       "A mobile-first Progressive Web App designed for a seamless healthcare e-commerce experience with offline support.",
     tech: ["NextJS", "Mantine", "TailwindCSS", "ESLint", "Prettier"],
-    link: "https://stgpwa.goapotik.com/",
+    link: "https://m.goapotik.com/",
     thumbnail: PTGoaPwa,
     isMobile: true,
   },
@@ -74,7 +74,7 @@ export const Portfolio: FC<SectionProps> = ({ ...props }) => {
     <div
       {...props}
       className={classNames(
-        "px-4 lg:pt-20 lg:pb-8 w-full flex justify-center bg-dark-950",
+        "px-4 lg:pt-20 pt-24 lg:pb-8 w-full flex justify-center bg-dark-950",
         props.className,
         styles.portfolio
       )}
@@ -127,7 +127,7 @@ export const Portfolio: FC<SectionProps> = ({ ...props }) => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               className={classNames(
-                "flex items-center rounded-xl border border-dark-700 transition-all duration-300 overflow-hidden bg-transparent backdrop-blur-md h-full p-2",
+                "flex md:flex-row flex-col md:gap-0 gap-2 items-center rounded-xl border border-dark-700 transition-all duration-300 overflow-hidden bg-transparent backdrop-blur-md h-full p-2",
                 hoveredIndex === null
                   ? "opacity-100"
                   : hoveredIndex === index

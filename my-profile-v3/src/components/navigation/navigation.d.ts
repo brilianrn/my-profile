@@ -9,4 +9,6 @@ export interface ISectionHeader {
 
 export interface TopbarProps {
   sections: ISectionHeader[];
+  toggleMenu?: () => void;
+  isOpen?: boolean;
 }
